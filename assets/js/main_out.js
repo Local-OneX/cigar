@@ -632,19 +632,17 @@
     let quadtree;
 
     const settings = {
-        nick: '',
-        skin: 'gabe',
+        nick: 'https://www.gaberyal.github.io/gabeCigar',
+        skin: 'boobies',
         gamemode: '',
-        accessCode: '',
+        accessCode: 'little boy',
         nickList:
-`exampleNick
-exampleNick2
-...`,
+``,
         showSkins: true,
         showNames: true,
         darkTheme: true,
         showColor: true,
-        showMass: false,
+        showMass: true,
         _showChat: true,
         get showChat() {
             return this._showChat;
@@ -655,16 +653,16 @@ exampleNick2
             a ? chatBox.show() : chatBox.hide();
         },
         showMinimap: true,
-        showPosition: false,
-        showBorder: false,
-        showGrid: false,
+        showPosition: true,
+        showBorder: true,
+        showGrid: true,
         playSounds: false,
         soundsVolume: 0.5,
-        moreZoom: false,
+        moreZoom: true,
         fillSkin: true,
         backgroundSectors: false,
-        jellyPhysics: true,
-        doubleSplit: false,
+        jellyPhysics: false,
+        doubleSplit: true,
     };
     const pressed = {
         ' ': false,
@@ -1442,12 +1440,12 @@ exampleNick2
         drawShape(ctx) {
             ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
             ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
-            if (this.skin === "Guts" || this.skin === "!FullWhite") {
+            if (this.skin === "Guts" || this.skin === "!FullWhite" || this.skin === "boobies") {
                 ctx.strokeStyle = '#FFFFFF';
                 ctx.fillStyle = '#FFFFFF';
                 this.setColor(new Color(255, 255, 255));
             }
-            if (this.skin === "berserkGriffith" || this.skin === "!FullBlack"|| this.skin === "!Tenebres") {
+            if (this.skin === "berserkGriffith" || this.skin === "!FullBlack"|| this.skin === "!Tenebres" ) {
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#000000';
                 this.setColor(new Color(0, 0, 0));
@@ -1555,6 +1553,9 @@ exampleNick2
         if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
             size = size*1.2;
         }
+         if (text === "꧁aap꧂") {
+            size = size*1.5;
+        }
         ctx.font = size + 'px Ubuntu';
         ctx.lineWidth = Math.max(~~(size / 10), 2);
         canvas.width = ctx.measureText(text).width + 2 * ctx.lineWidth;
@@ -1574,6 +1575,10 @@ exampleNick2
         if (text.includes("⧩")) {
             ctx.fillStyle = '#000000';
             ctx.strokeStyle = '#FFFFFF';
+        }
+        if (text.includes("𝔒ɳe҉✘")) {
+            ctx.fillStyle = '#B61AFF';
+            ctx.strokeStyle = '#7C13AE';
         }
         
 
