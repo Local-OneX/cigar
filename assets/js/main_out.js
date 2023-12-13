@@ -1437,12 +1437,12 @@
         drawShape(ctx) {
             ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
             ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
-            if (this.skin === "Guts" || this.skin === "!FullWhite" || this.skin === "boobies") {
+            if (this.skin === "Guts" || this.skin === "!FullWhite" || this.skin === "boobies" || this.skin === "SBALuffy") {
                 ctx.strokeStyle = '#FFFFFF';
                 ctx.fillStyle = '#FFFFFF';
                 this.setColor(new Color(255, 255, 255));
             }
-            if (this.skin === "berserkGriffith" || this.skin === "!FullBlack"|| this.skin === "!Tenebres" ) {
+            if (this.skin === "berserkGriffith" || this.skin === "!FullBlack"|| this.skin === "!Tenebres") {
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#000000';
                 this.setColor(new Color(0, 0, 0));
